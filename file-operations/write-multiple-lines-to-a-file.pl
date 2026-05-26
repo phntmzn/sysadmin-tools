@@ -1,3 +1,4 @@
-lines = ["Hello world. In", " welcome to TutorialsTeacher.\n"]
-with open("C:\\myfile.txt", "w") as f:
-    f.writelines(lines)
+my @lines = ("Hello world. In", " welcome to TutorialsTeacher.\n");
+open(my $fh, '>', 'C:\\myfile.txt') or die "Could not open file: $!";
+print $fh $_ foreach @lines;
+close($fh);

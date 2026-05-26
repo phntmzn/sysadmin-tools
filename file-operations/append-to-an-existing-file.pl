@@ -1,2 +1,3 @@
-with open('C:\\myfile.txt', 'a') as f:
-    f.write(" World!")
+open(my $fh, '>>', 'C:\\myfile.txt') or die "Could not open file: $!";
+print $fh " World!";
+close($fh);
